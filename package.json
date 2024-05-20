@@ -1,0 +1,11 @@
+{
+  "name": "demoNode",
+  "version": "1.0.0",
+  "description": "This is a demo node project",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  }
+}
