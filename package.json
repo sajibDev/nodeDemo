@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a demo node project",
   "main": "main.js",
+  "type":"module",
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",

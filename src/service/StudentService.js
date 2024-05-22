@@ -1,16 +1,12 @@
-const { Pool } = require("pg");
-const { postgresConfig } = require("../../utils/DatabaseUtil");
-const repository = require("../repository/StudentRepository");
+import pkg from "pg";
+import { postgresConfig } from "../../utils/DatabaseUtil.js";
+import * as studentRepo from "../repository/StudentRepository.js";
 
 async function getStudents(req, res) {
+  const { Pool } = pkg;
   const pool = new Pool(postgresConfig);
-  const students = await repository.fetchStudents(pool);
+  const students = await studentRepo.fetchStudents(pool);
   res.send(students);
   await pool.end();
 }
-
-const service = {
-  getStudents,
-};
-
-module.exports = service;
+export { getStudents };

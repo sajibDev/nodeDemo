@@ -1,9 +1,9 @@
-const service = require("../service/StudentService");
+import * as service from "../service/StudentService.js";
 
 async function studentController(req, res) {
-    
+
     await service.getStudents(req, res);
   
 }
 
-module.exports = studentController;
+export default studentController;

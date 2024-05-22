@@ -6,6 +6,4 @@ const postgresConfig = {
   database: "postgres",
 };
 
-module.exports = {
-  postgresConfig,
-};
+export { postgresConfig };
